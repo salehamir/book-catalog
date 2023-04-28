@@ -15,6 +15,7 @@ The program uses RestAPI and GraphQL as examples of implemented adapters in the 
 ### Outbound Ports
 
 The program uses Postgres as a relational database for the online runtime and H2 as an in-memory tool for test cases. In the test case and runtime case, the program automatically uses the H2 database and Postgres database, respectively.
+![](docs/images/Architechture.png)
 
 ## Tech Stack
 
