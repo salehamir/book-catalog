@@ -2,7 +2,7 @@ databaseChangeLog:
 
   - changeSet:
       id: create-book-table
-      author: ajacquot
+      author: amirSaleh
       changes:
         - createTable:
             schema: public
