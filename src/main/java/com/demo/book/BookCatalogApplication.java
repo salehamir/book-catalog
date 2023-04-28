@@ -2,10 +2,8 @@ package com.demo.book;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
-import org.springdoc.core.GroupedOpenApi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.r2dbc.config.EnableR2dbcAuditing;
 
 @SpringBootApplication
@@ -15,13 +13,6 @@ public class BookCatalogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookCatalogApplication.class, args);
-	}
-	@Bean
-	public GroupedOpenApi bookGroupApi() {
-		return GroupedOpenApi.builder()
-				.group("Book")
-				.pathsToMatch("/demo/book/**")
-				.build();
 	}
 
 }
