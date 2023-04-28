@@ -1,0 +1,5 @@
+query getAllBooksByAuthor($author:String){
+    getAllBooksByAuthor (author:$author) {
+        id,author
+    }
+}

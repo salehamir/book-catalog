@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15.2
+    restart: always
+    environment:
+      - POSTGRES_USER=${DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - book-network
+  app:
+    image: book-catalog
+    restart: always
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    depends_on:
+      - db
+    networks:
+      - book-network
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=${DATABASE_NAME}
+      - DB_USER=${DATABASE_USERNAME}
+      - DB_PASSWORD=${DATABASE_PASSWORD}
+      - APP_PORT=${APP_PORT}
+volumes:
+  db:
+    driver: local
+networks:
+  book-network:

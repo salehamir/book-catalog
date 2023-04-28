@@ -1,8 +1,8 @@
 type Query {
  getBookById(id: ID): BookOutput
  getAllBooks: [BookOutput]
- getBooksByAuthor(author: String): [BookOutput]
- getPlayersByTitle(title: String): [BookOutput]
+ getAllBooksByAuthor(author: String): [BookOutput]
+ getAllBooksByTitle(title: String): [BookOutput]
 }
 
 type Mutation {

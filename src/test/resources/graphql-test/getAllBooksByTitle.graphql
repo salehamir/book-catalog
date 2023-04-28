@@ -1,0 +1,5 @@
+query getAllBooksByTitle($title:String){
+    getAllBooksByTitle (title:$title) {
+        id,title
+    }
+}
