@@ -41,7 +41,7 @@ The following technologies are used to build the program:
 
 To build and run the program, use the `docker` and `docker-compose` commands. Run the `run.sh` file as a superuser to start the program. If you need to change some configuration such as database settings or ports, use the `.env` file provided.
 
-Swagger URL : http://locahost:5050/swagger-ui.html
+Swagger URL : http://localhost:5050/swagger-ui.html
 GraphQL URL : http://localhost:5050/graphql
 
 ### Using IDE
