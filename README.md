@@ -28,8 +28,10 @@ The following technologies are used to build the program:
 - Spring Data
 - Spring R2DBC
 - Swagger
-- Map Struct
-- Makito
+- MapStruct
+- Mockito
+- PostgreSQL
+- H2
 - Docker
 - Docker-Compose
 
