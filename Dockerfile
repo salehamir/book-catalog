@@ -3,8 +3,9 @@ FROM eclipse-temurin:17-jdk-focal
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
-RUN ./mvnw dependency:go-offline
-COPY ./src ./src
-RUN ./mvnw clean install
+COPY src src
+
+RUN --mount=type=cache,target=/root/.m2 ./mvnw install -DskipTests
+
 
 CMD ["./mvnw", "spring-boot:run"]

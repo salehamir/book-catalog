@@ -39,10 +39,23 @@ The following technologies are used to build the program:
 
 ### Not using IDE
 
-To build and run the program, use the `docker` and `docker-compose` commands. Run the `run.sh` file as a superuser to start the program. If you need to change some configuration such as database settings or ports, use the `.env` file provided.
+To build and run the program, use the `docker-compose` command. Run the `run.sh` file as a superuser to start the program. If you need to change some configuration such as database settings or ports, use the `.env` file provided.
 
-Swagger URL : http://localhost:5050/swagger-ui.html
-GraphQL URL : http://localhost:5050/graphql
+#### Usage: run.sh [command]
+
+##### Available commands:
+
+- start: Starts the application in detached mode using Docker Compose.
+- stop: Stops the running application and removes containers, networks, and volumes created by Docker Compose.
+- restart: Calls the 'stop' command followed by the 'start' command to restart the application.
+##### Examples:
+- To start the application: run.sh start
+- To stop the application: run.sh stop
+- To restart the application: run.sh restart
+
+#### API URL :
+- Swagger URL : http://localhost:5050/swagger-ui.html
+- GraphQL URL : http://localhost:5050/graphql
 
 ### Using IDE
 

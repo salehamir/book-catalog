@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  db:
+  postgres:
     image: postgres:15.2
     restart: always
     environment:
@@ -14,16 +14,16 @@ services:
     networks:
       - book-network
   app:
-    image: book-catalog
+    build: .
     restart: always
     ports:
       - "${APP_PORT}:${APP_PORT}"
     depends_on:
-      - db
+      - postgres
     networks:
       - book-network
     environment:
-      - DB_HOST=db
+      - DB_HOST=postgres
       - DB_PORT=5432
       - DB_NAME=${DATABASE_NAME}
       - DB_USER=${DATABASE_USERNAME}
