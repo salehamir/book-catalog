@@ -30,6 +30,7 @@ The following technologies are used to build the program:
 - Swagger
 - MapStruct
 - Mockito
+- Liquibase
 - PostgreSQL
 - H2
 - Docker
